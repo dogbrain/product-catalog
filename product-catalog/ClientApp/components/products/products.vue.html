@@ -1,0 +1,21 @@
+﻿<template>
+    <div>
+        <h1>Sale</h1>
+
+        <p>Buy our great products!</p>
+
+        <div v-if="products.length">
+            <div v-for="item in products" class="col-lg-4">
+                <h1>{{ item.name }}</h1>
+                <img v-bind:src="item.imageUrl" class="pull-left">
+                <p>{{item.description}}</p>
+                <p>Before: <del>{{item.fullPrice}}:-</del></p>
+                <p>Now: {{item.discountedPrice}}:-</p>
+                <a v-bind:href="'/product/'+ item.id" :id="'product-'+item.id">Buy</a>
+            </div>
+        </div>
+
+        <p v-else><em>Loading...</em></p>
+    </div>
+</template>
+<script src="./Products.ts"></script>

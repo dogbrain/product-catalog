@@ -1,0 +1,15 @@
+{
+    "manifestVersion": 1,
+    "deployments": {
+        "aspNetCoreWeb": [
+            {
+                "name": "product-catalog-backend",
+                "parameters": {
+                    "appBundle": "forawseb.zip",
+                    "iisPath": "/api",
+                    "iisWebSite": "Default Web Site"
+                }
+            }
+        ]
+    }
+}
