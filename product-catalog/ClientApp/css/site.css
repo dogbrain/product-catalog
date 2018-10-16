@@ -3,4 +3,10 @@
     body {
         padding-top: 50px;
     }
+
+    .full-width {
+        width: 100vw;
+        margin-left: -50vw;
+        left: 50%;
+    }
 }

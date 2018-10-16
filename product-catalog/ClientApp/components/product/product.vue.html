@@ -1,14 +1,11 @@
 ﻿<template>
-    <div>
-        <h1>Weather forecast</h1>
-
-        <p>This component demonstrates fetching data from the server.</p>
+    <div class="col-md-6 " style="margin: 0 auto;">  
         <div v-if="isLoaded" :id="'display-product-'+product.id">
             <h1>{{ product.name }}</h1>
-            <p>
-                <img v-bind:src="product.imageUrl" class="pull-left">
-                {{product.description}}
-            </p>
+            
+            <img v-bind:src="product.imageUrl" class="pull-left">
+              
+            <p> {{product.description}}</p>
             <p>{{product.detailedDescription}}</p>
             <p>Before: <del>{{product.fullPrice}}:-</del></p>
             <p>Now: {{product.discountedPrice}}:-</p>

@@ -26,7 +26,7 @@ namespace product_catalog.IntegrationTests
             Webdriver.Quit();
         }
 
-        public string BaseUrl => "http://localhost:9909/";
+        public string BaseUrl => "http://localhost:5000/";
 
         public IWebDriver Webdriver { get; private set; }
 

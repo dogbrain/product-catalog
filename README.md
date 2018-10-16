@@ -13,6 +13,7 @@ I started with finding a base template for the project. I googled around a bit a
 
 ## How to get started
 * Run dotnet tool install -g dotnet-aspnet-codegenerator
+* Run dotnet restore
 * Run npm install
 
 ## Integration Testing
