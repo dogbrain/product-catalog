@@ -1,9 +1,13 @@
-﻿using FluentAssertions;
+﻿using System;
+
+using FluentAssertions;
+
 using NUnit.Framework;
+
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+
 using product_catalog.IntegrationTests.Helpers;
-using System;
 
 namespace product_catalog.IntegrationTests
 {
@@ -15,15 +19,16 @@ namespace product_catalog.IntegrationTests
         {
             Webdriver = new ChromeDriver();
         }
+
         [TearDown]
         public void TearDown()
         {
             Webdriver.Quit();
         }
-        public string BaseUrl => "http://localhost:59915/";
+
+        public string BaseUrl => "http://localhost:9909/";
 
         public IWebDriver Webdriver { get; private set; }
-
 
         [Test]
         public void ClickingOnAproductShouldTakeYouToTheProductPage()
@@ -32,15 +37,8 @@ namespace product_catalog.IntegrationTests
             Webdriver.WaitUntilElementVisible(By.Id("product-2"));
             Webdriver.FindElement(By.Id("product-2")).Click();
             Webdriver.WaitUntilElementVisible(By.Id("display-product-2"));
-            Action findElement = () =>
-            {
-                Webdriver.FindElement(By.Id("display-product-2"));
-            };
+            Action findElement = () => { Webdriver.FindElement(By.Id("display-product-2")); };
             findElement.Should().NotThrow<NoSuchElementException>();
-
-
-
-
         }
     }
 }

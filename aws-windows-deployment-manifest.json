@@ -3,10 +3,10 @@
     "deployments": {
         "aspNetCoreWeb": [
             {
-                "name": "product-catalog-backend",
+                "name": "product-catalog",
                 "parameters": {
                     "appBundle": "forawseb.zip",
-                    "iisPath": "/api",
+                    "iisPath": "/",
                     "iisWebSite": "Default Web Site"
                 }
             }
